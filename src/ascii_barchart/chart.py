@@ -1,6 +1,8 @@
 from rich.console import Console
 from rich.text import Text
 
+from analysis import result 
+
 STYLES = {
     "A": "bold cyan",
     "B": "bold magenta",
@@ -35,7 +37,7 @@ def render_bar_chart(values):
 
         console.print(line)
 
-render_bar_chart(values)
+render_bar_chart(result)
 
 
 
