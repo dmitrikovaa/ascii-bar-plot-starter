@@ -11,6 +11,6 @@ def average_value1_by_type(rows):
     result = []
     for point_type in sorted(sums):
         average = sums[point_type] / counts[point_type]
-        result.append(point_type, average)
+        result.append((point_type, average))
 
     return result

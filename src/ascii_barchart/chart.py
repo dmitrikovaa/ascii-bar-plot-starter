@@ -1,7 +1,8 @@
 from rich.console import Console
 from rich.text import Text
 
-from analysis import result 
+from .analysis import average_value1_by_type
+from .io import load_rows
 
 STYLES = {
     "A": "bold cyan",
@@ -37,7 +38,8 @@ def render_bar_chart(values):
 
         console.print(line)
 
-render_bar_chart(result)
+rows = load_rows("data/points.csv")
+render_bar_chart(average_value1_by_type(rows))
 
 
 
